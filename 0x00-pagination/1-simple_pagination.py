@@ -19,6 +19,7 @@ def index_range(page, page_size):
     end = page * page_size
     return (start, end)
 
+
 class Server:
     """Server class to paginate a database of popular baby names.
     """
@@ -37,8 +38,6 @@ class Server:
             self.__dataset = dataset[1:]
 
         return self.__dataset
-
-
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """Get page from dataset
