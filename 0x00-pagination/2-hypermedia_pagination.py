@@ -52,7 +52,7 @@ class Server:
         except IndexError:
             return []
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> List[List]:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """
         method that takes the same arguments (and defaults)
         as get_page and returns a dictionary containing
