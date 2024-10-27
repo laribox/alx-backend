@@ -54,8 +54,7 @@ class Server:
         - data: the actual page of the dataset
         """
 
-        assert index is not None and 0 <= index < len(self.indexed_dataset()),
-        "Index out of range."
+        assert index is not None and 0 <= index < len(self.indexed_dataset()),"Index out of range."
 
         data = []
         current_index = index
