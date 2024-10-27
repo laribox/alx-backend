@@ -54,13 +54,15 @@ class Server:
         - data: the actual page of the dataset
         """
 
-        assert index is not None and 0 <= index < len(self.indexed_dataset()),"Index out of range."
+        assert index is not None
+        and 0 <= index < len(self.indexed_dataset()), "Index out of range."
 
         data = []
         current_index = index
         count = 0
 
-        while count < page_size and current_index < len(self.indexed_dataset()):
+        while count < page_size
+        and current_index < len(self.indexed_dataset()):
             if current_index in self.__indexed_dataset:
                 data.append(self.__indexed_dataset[current_index])
                 count += 1
