@@ -2,7 +2,7 @@
 """
 LFUCache module
 """
- 
+
 from base_caching import BaseCaching
 
 
@@ -65,5 +65,3 @@ class LFUCache(BaseCaching):
         value = self.frequencies.get(key)
         self.frequencies[key] = int(value) + 1 if value is not None else 1
         self.min_frequency = min(self.frequencies.values())
-
-
