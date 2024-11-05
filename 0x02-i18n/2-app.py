@@ -9,7 +9,7 @@ from flask_babel import Babel
 
 
 class Config(object):
-    """ 
+    """
     config class
     """
     LANGUAGES = ['en', 'fr']
@@ -25,7 +25,7 @@ babel = Babel(app)
 @babel.localeselector
 def get_locale():
     """
-    get the local 
+    get the local
     """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
