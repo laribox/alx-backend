@@ -102,7 +102,7 @@ def index():
     """
     main route
     """
-    return render_template('7-index.html')
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
